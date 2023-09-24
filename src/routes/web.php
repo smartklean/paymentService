@@ -20,13 +20,13 @@ $router->get('/', function() {
         'data' => [
           'key' => Illuminate\Support\Str::random(32),
         ],
-        'message' => 'Welcome to CashEnvoy!'
+        'message' => 'Welcome to Sample Application!'
       ], 200);
     }
 
     return response()->json([
       'status' => true,
-      'message' => 'Welcome to CashEnvoy!'
+      'message' => 'Hooray Welcome Onboard!'
     ], 200);
 });
 
@@ -44,15 +44,15 @@ $router->group([
   $router->group([
     'prefix' => 'v1'
   ], function() use ($router) {
-    /* Consumer*/
+    /* Payment*/
     $router->group([
-      'prefix' => 'consumer'
+      'prefix' => 'payment'
     ], function() use ($router) {
-      $router->get('/business/{businessId}', 'Apis\v1\ConsumerController@fetch');
-      $router->get('/email/{email}/business/{id}', 'Apis\v1\ConsumerController@fetchByEmail');
-      $router->get('/{consumerId}/business/{businessId}', 'Apis\v1\ConsumerController@fetchSingle');
-      $router->put('/{consumerId}/business/{businessId}', 'Apis\v1\ConsumerController@update');
-      $router->post('/', 'Apis\v1\ConsumerController@store');
+      $router->get('/', 'Apis\v1\PaymentController@fetch');
+      $router->get('/user/{userId}', 'Apis\v1\PaymentController@fetchUserPayment');
+      $router->get('/{PaymentId}', 'Apis\v1\PaymentController@fetchSingle');
+      $router->put('/{PaymentId}', 'Apis\v1\PaymentController@update');
+      $router->post('/', 'Apis\v1\PaymentController@store');
     });
   });
   /* Version 1 */

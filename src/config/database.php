@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('CONSUMERWS_DB_CONNECTION', 'mysql'),
+    'default' => env('PAYMENTWS_DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -36,34 +36,34 @@ return [
     'connections' => [
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('CONSUMERWS_DB_HOST'),
-            'port' => env('CONSUMERWS_DB_PORT'),
-            'database' => env('CONSUMERWS_DB_DATABASE'),
-            'username' => env('CONSUMERWS_DB_USERNAME'),
-            'password' => env('CONSUMERWS_DB_PASSWORD'),
-            'unix_socket' => env('CONSUMERWS_DB_SOCKET', config('constants.db.socket')),
-            'charset' => env('CONSUMERWS_DB_CHARSET', config('constants.db.charset')),
-            'collation' => env('CONSUMERWS_DB_COLLATION', config('constants.db.collation')),
-            'prefix' => env('CONSUMERWS_DB_PREFIX', config('constants.db.prefix')),
-            'strict' => env('CONSUMERWS_STRICT_MODE', config('constants.db.strict')),
-            'engine' => env('CONSUMERWS_DB_ENGINE', config('constants.db.engine')),
-            'timezone' => env('CONSUMERWS_DB_TIMEZONE', config('constants.db.timezone')),
+            'host' => env('PAYMENTWS_DB_HOST'),
+            'port' => env('PAYMENTWS_DB_PORT'),
+            'database' => env('PAYMENTWS_DB_DATABASE'),
+            'username' => env('PAYMENTWS_DB_USERNAME'),
+            'password' => env('PAYMENTWS_DB_PASSWORD'),
+            'unix_socket' => env('PAYMENTWS_DB_SOCKET', config('constants.db.socket')),
+            'charset' => env('PAYMENTWS_DB_CHARSET', config('constants.db.charset')),
+            'collation' => env('PAYMENTWS_DB_COLLATION', config('constants.db.collation')),
+            'prefix' => env('PAYMENTWS_DB_PREFIX', config('constants.db.prefix')),
+            'strict' => env('PAYMENTWS_STRICT_MODE', config('constants.db.strict')),
+            'engine' => env('PAYMENTWS_DB_ENGINE', config('constants.db.engine')),
+            'timezone' => env('PAYMENTWS_DB_TIMEZONE', config('constants.db.timezone')),
         ],
 
         'mysql_test' => [
             'driver' => 'mysql',
-            'host' => env('CONSUMERWS_TEST_DB_HOST'),
-            'port' => env('CONSUMERWS_TEST_DB_PORT'),
-            'database' => env('CONSUMERWS_TEST_DB_DATABASE'),
-            'username' => env('CONSUMERWS_TEST_DB_USERNAME'),
-            'password' => env('CONSUMERWS_TEST_DB_PASSWORD'),
-            'unix_socket' => env('CONSUMERWS_TEST_DB_SOCKET', config('constants.db.socket')),
-            'charset' => env('CONSUMERWS_TEST_DB_CHARSET', config('constants.db.charset')),
-            'collation' => env('CONSUMERWS_TEST_DB_COLLATION', config('constants.db.collation')),
-            'prefix' => env('CONSUMERWS_TEST_DB_PREFIX', config('constants.db.prefix')),
-            'strict' => env('CONSUMERWS_TEST_STRICT_MODE', config('constants.db.strict')),
-            'engine' => env('CONSUMERWS_TEST_DB_ENGINE', config('constants.db.engine')),
-            'timezone' => env('CONSUMERWS_TEST_DB_TIMEZONE', config('constants.db.timezone')),
+            'host' => env('PAYMENTWS_TEST_DB_HOST'),
+            'port' => env('PAYMENTWS_TEST_DB_PORT'),
+            'database' => env('PAYMENTWS_TEST_DB_DATABASE'),
+            'username' => env('PAYMENTWS_TEST_DB_USERNAME'),
+            'password' => env('PAYMENTWS_TEST_DB_PASSWORD'),
+            'unix_socket' => env('PAYMENTWS_TEST_DB_SOCKET', config('constants.db.socket')),
+            'charset' => env('PAYMENTWS_TEST_DB_CHARSET', config('constants.db.charset')),
+            'collation' => env('PAYMENTWS_TEST_DB_COLLATION', config('constants.db.collation')),
+            'prefix' => env('PAYMENTWS_TEST_DB_PREFIX', config('constants.db.prefix')),
+            'strict' => env('PAYMENTWS_TEST_STRICT_MODE', config('constants.db.strict')),
+            'engine' => env('PAYMENTWS_TEST_DB_ENGINE', config('constants.db.engine')),
+            'timezone' => env('PAYMENTWS_TEST_DB_TIMEZONE', config('constants.db.timezone')),
         ],
     ],
 

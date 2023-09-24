@@ -6,7 +6,7 @@ services:
     build:
       context: .
       target: base
-    container_name: ConsumerWS
+    container_name: PaymentWS
     environment:
       - BASTION1_SSH_PUBLIC_KEY=local
       - BASTION2_SSH_PUBLIC_KEY=local
@@ -15,7 +15,7 @@ services:
     volumes:
       - ./src:/var/www/html
     ports:
-      - 8003:80
+      - 8012:80
 
 networks:
   default:
